@@ -6,14 +6,19 @@ import React from 'react'
 
 import Logo from '../components/templates/Logo'
 import Nav from '../components/templates/Nav'
-import Main from '../components/templates/Main'
+
 import Footer from '../components/templates/Footer'
 
 
+import Routes from './Routes'
+import { HashRouter } from 'react-router-dom'
+
 export default props =>
+    <HashRouter>
     <div className="app">
         <Logo/>
         <Nav/>
-        <Main icon="home" title="Inicio"  subtitle="Segundo projeto do capítulo de react"/>
+        <Routes/>
         <Footer/>
     </div>
+    </HashRouter>
