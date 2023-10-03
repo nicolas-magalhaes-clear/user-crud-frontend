@@ -1,7 +1,7 @@
 aside.menu-area {
     padding-top: 1rem;
     background-color: var(--bg-dark);
-    box-shadow: inset2px 0 10px 0 rgba(0, 0, 0, 0.12),
+    box-shadow: inset 2px 0 10px 0 rgba(0, 0, 0, 0.3),
         2px 0 15px 0 rgba(0, 0, 0, 0.09);
 }
 .menu a{
@@ -13,4 +13,21 @@ aside.menu-area {
 }
 .menu a:hover{
     background: linear-gradient(135deg, #07a7e3, #32dac3 100%)
+}
+
+@media(max-width: 768px) {
+    .menu{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .menu a {
+        display: inline;
+        padding: 10px;
+        margin: 0px;
+    }
+    .menu{
+        height: 100%;
+        justify-content: space-around;
+    }
 }

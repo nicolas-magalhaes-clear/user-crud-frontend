@@ -5,6 +5,7 @@
     --header-height: 100px;
     --aside-width: 225px;
     --footer-height: 40px;
+    --menu-top-height: 100px
 
     --shadow:
         0 2px 23px rgba(0,0,0,0.1),
@@ -49,4 +50,21 @@ main.content{
 }
 footer.footer{
     grid-area: footer
+}
+
+
+@media(max-width: 768px){
+    .app{
+        grid-template-rows: 
+            var(--header-height)
+            var(--menu-top-height)
+            1fr
+            var(--footer-height);
+        grid-template-columns: var(--aside-width) 1fr;
+        grid-template-areas: 
+            "logo header"
+            "menu menu"
+            "content content"
+            "footer footer";
+    }
 }
